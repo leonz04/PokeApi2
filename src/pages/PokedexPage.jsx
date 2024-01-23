@@ -95,7 +95,7 @@ const PokedexPage = () => {
 
     const handleSearch = e => {
 
-        cbFilter = (pokeInfo) => pokeInfo.name.toLowerCase().includes(inputName.current.value)
+        cbFilter = (pokeInfo) => pokeInfo.name.toLowerCase().includes(inputName.current.value.trim().toLowerCase())
         pokeResults = (pokemons?.results.filter(cbFilter))
 
         e.preventDefault()
