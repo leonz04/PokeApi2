@@ -109,11 +109,6 @@ const PokedexPage = () => {
             setError(true);
             setMsgError('ingrese nombre valido')
             setInputValue('')
-
-
-
-
-
         } else {
             setInputValue(inputName.current.value.trim().toLowerCase())
             setError(false)
@@ -122,8 +117,6 @@ const PokedexPage = () => {
         setPage(1)
         inputName.current.value = ''
         totalResults = pokeResults.length
-        setTotalPokemons(totalResults)
-
     }
 
     console.log(totalPokemons)

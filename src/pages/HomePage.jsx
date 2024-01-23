@@ -7,7 +7,7 @@ import './styles/HomePage.css'
 
 const HomePage = () => {
 
-  const [msgError,setMsgError]=useState()
+  const [msgError,setMsgError]=useState('')
    const [error, setError] = useState(false)
     const inputTrainer =useRef()
     
