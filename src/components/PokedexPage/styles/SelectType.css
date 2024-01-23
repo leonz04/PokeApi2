@@ -1,0 +1,36 @@
+.filter__type__bar{
+    display: flex;
+    align-items: center;
+}
+
+.filter__type__bar__label{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color:#DD1A1A;
+}
+
+.type__select__bar{
+    color:white;
+    padding: 0.1em;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.4em;
+    background-color: #DD1A1A;
+    margin-left: 1em;
+    border-radius: 12px;
+    position: relative;
+    
+}
+
+
+
+.type__select__options{
+    color: black;
+    background-color: white;
+    
+}
+
+
+
+

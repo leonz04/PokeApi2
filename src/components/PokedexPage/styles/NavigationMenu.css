@@ -1,0 +1,66 @@
+.nav__bar{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2em;
+    background-color: black;
+    padding: 0.6em;
+    border-radius: 15px;
+    border: 0.2em solid #DD1A1A;
+    color: white;
+    width: 100%;
+    margin-top: 5px;
+    
+}
+.go-to-list-pokemon{
+    
+    display: flex;    
+    background-color: white;   
+    border-radius: 50%;  
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid black;
+    text-align: center;
+    ;
+}
+
+.nav__menu{
+    display: flex;
+}
+
+.nav__menu__item{
+    padding: 0.3em;
+    font-size: 1.2rem;
+    background-color: white;
+    margin-left: 0.5em;
+    color: black;
+    border-radius:10px ;
+}
+
+.nav__menu__item:hover{
+   
+    background-color: #DD1A1A;    
+    color: white;
+    font-weight: 500;
+   
+}
+
+.mode__view__btn{
+    padding: 0.3em;
+    font-size: 1.2rem;
+    background-color: white;
+    margin-left: 0.5em;
+    color: black;
+    border: 0;
+    border-radius:10px ;
+
+}
+
+.mode__view__btn:hover{
+   
+    background-color: #DD1A1A;    
+    color: white;
+    font-weight: 500;
+   
+}
+

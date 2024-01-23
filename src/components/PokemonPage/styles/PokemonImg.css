@@ -1,0 +1,9 @@
+
+
+.pokemon__by__move__img{
+    width: 60px;
+}
+
+.pokemon__by__move__img:hover{
+    transform: scale(2.5);
+}
