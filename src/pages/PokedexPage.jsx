@@ -7,6 +7,7 @@ import './styles/PokedexPage.css'
 import Pagination from '@mui/material/Pagination';
 import GeneralHeader from '../components/HomePAge/GeneralHeader'
 import NavigationMenu from "../components/PokedexPage/NavigationMenu"
+import { PaginationItem } from "@mui/material"
 
 
 
@@ -27,6 +28,7 @@ const PokedexPage = () => {
     const url = 'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0'
 
     const [pokemons, getpokemons, getTypePokemon] = useFetch(url)
+    
     const inputPerPage = useRef()
 
 
@@ -46,8 +48,8 @@ const PokedexPage = () => {
     let cbFilter = (pokeInfo) => pokeInfo.name.toLowerCase().includes(inputValue)
 
 
-
     let pokeResults = pokemons?.results
+
 
 
 
@@ -56,6 +58,11 @@ const PokedexPage = () => {
         setPage(value)
 
     }
+    
+    useEffect(() => {
+        setTotalPokemons(pokemons?.results.filter(cbFilter).length);
+      }, [page, handleChange])
+    
 
     let startIndex = (page - 1) * limitPerPage;
     let endIndex = startIndex + limitPerPage;
@@ -66,22 +73,6 @@ const PokedexPage = () => {
     console.log(totalResults)
 
     const [totalPokemons, setTotalPokemons] = useState(totalResults)
-
-
-
-    useEffect(() => {
-
-        setTotalPokemons(totalResults);
-
-    }, [totalResults])
-
-
-
-
-
-
-
-
 
     const handlePagination = (event) => {
         event.preventDefault();
@@ -94,9 +85,15 @@ const PokedexPage = () => {
     }
 
     const handleSearch = e => {
-
+        console.log('object');
+       
+        console.log(pokeResults.length);
+        
         cbFilter = (pokeInfo) => pokeInfo.name.toLowerCase().includes(inputName.current.value.trim().toLowerCase())
         pokeResults = (pokemons?.results.filter(cbFilter))
+
+       console.log('pokeResults.length');
+       console.log(pokeResults.length);
 
         e.preventDefault()
         if (inputName.current.value.length < 1) {
@@ -110,6 +107,7 @@ const PokedexPage = () => {
             setMsgError('ingrese nombre valido')
             setInputValue('')
         } else {
+
             setInputValue(inputName.current.value.trim().toLowerCase())
             setError(false)
 
@@ -117,10 +115,14 @@ const PokedexPage = () => {
         setPage(1)
         inputName.current.value = ''
         totalResults = pokeResults.length
+        console.log('object');
+        console.log(totalPokemons);
     }
 
-    console.log(totalPokemons)
-    console.log(limitPerPage)
+    console.log(`total results${totalResults}`)
+    console.log(`limitPerPage${limitPerPage}`)
+    console.log(`pokeResults${pokeResults.length}`)
+    console.log(`total pokemons${totalPokemons}`);
 
 
 
@@ -188,13 +190,15 @@ const PokedexPage = () => {
 
             <section className="container__pagination">
                 <Pagination
-                    count={parseInt(Math.ceil(parseInt(totalPokemons) / parseInt(limitPerPage))) || 0}
+                    count={parseInt(totalPokemons / limitPerPage) || 0}
                     page={page}
                     onChange={handleChange}
                     shape="rounded"
                     variant="text"
                     color="primary"
                     size="large"
+                    
+
 
                 />
             </section>

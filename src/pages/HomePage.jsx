@@ -40,7 +40,7 @@ const HomePage = () => {
 
             ):
             (
-              <span></span>
+              ''
             )
           }
             <input className='input__login' ref={inputTrainer}type='text'/>

@@ -43,9 +43,9 @@ const NavigationMenu = () => {
             <li className='nav__menu__item' onClick={handlePokedex}>
                 Pokemons
             </li>
-            <li className='nav__menu__item' onClick={handleRegions}>
+            {/*<li className='nav__menu__item' onClick={handleRegions}>
                 Regions
-            </li>
+            </li>*/}
             <li className='nav__menu__item' onClick={handleLocations}>
                 Locations
             </li>

@@ -75,54 +75,6 @@
     background-color: white;
 }
 
-button.css-s1jfdj-MuiButtonBase-root-MuiPaginationItem-root {
-    
-    display: inline-flex;
-   
-    align-items: center;
-    
-    justify-content: center;
-    position: relative;
-    box-sizing: border-box;
-    background-color: black;
-    outline: 0;
-    border: 0;
-    margin: 0;
-    border-radius: 0;
-    padding: 0;
-    cursor: pointer;
-   
-    user-select: none;
-    vertical-align: middle;
-
-    text-decoration: none;
-    color: inherit;
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 1.43;
-    letter-spacing: 0.01071em;
-    border-radius: 4px;
-    text-align: center;
-    box-sizing: border-box;
-    min-width: 40px;
-    height: 40px;
-    padding: 0 10px;
-    margin: 0 3px;
-    color: white;
-    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-}
-button.css-s1jfdj-MuiButtonBase-root-MuiPaginationItem-root:hover{
-    background-color: #DD1A1A;
-    opacity: 0.4;
-}
-
-button.css-s1jfdj-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected{
-    background-color:#DD1A1A;
-}
-
-
 
 
 
